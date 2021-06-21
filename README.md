@@ -1,1 +1,2 @@
 # An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks
+This repository contains the implementation of the paper " An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks" where the existing loss detection mechanism of TCP NewReno has been modified by a packet labeling scheme called TCP PLATO. TCP PLATO has been simulated in ns-3 and performance is compared with TCP NewReno for various buffer sizes, SRU, and topologies. Results are plotted with the help of MATLAB.
