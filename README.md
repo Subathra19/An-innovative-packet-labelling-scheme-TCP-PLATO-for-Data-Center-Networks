@@ -25,3 +25,13 @@ Above figure shows a simple cluster-based storage system where one client reques
 * Block loss
 * Double loss
 * Tail loss
+
+## TCP PLATO
+* It modifies the existing loss detection mechanism of TCP NewReno
+* It uses a packet labelling scheme and preferentially enqueues the labelled packets at the switch.
+* It allows TCP to detect packet loss by three duplicate acknowledgements instead of time expensive RTO and thereby improves throughput.
+
+### Mechanism of TCP PLATO
+<p align="center">
+  <img width="460" height="300" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/plato.png ">
+</p>
