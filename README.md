@@ -103,6 +103,14 @@ The modified buffer management of switch is shown below:
   * [Star Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/star.cc)
   * [Dumbbell Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/dumbbell.cc)  
 
+* The obtained results are plotted using MATLAB 
+
+### Conclusions:
+
+<p align="justify"> When multiple synchronized servers send data to the same client in parallel, TCP incast congestion occurs. It is mainly due to the occurrence of retransmission timeout at one or more servers due to the packet loss. TCP PLATO uses a labelling method to improve the existing loss detection mechanism of TCP NewReno. From the ns-3 simulation results obtained, we can see that throughput of DCN (Data Center Network) can be increased by reduction of RTOmin values. And packet labelling method
+(TCP PLATO) provides better throughput than TCP NewReno for same reduced RTOmin values(i.e.,RTOmin=1ms). DCN was simulated using star and dumbbell topologies but we can see that DCN with star topology provides better throughput than DCN with dumbbell topology. Hence, star topology is preferable for DCN.</p>
+
+
 ### References
 [1] Shikar Shukla, Shingau Chan, Adrian S.-W. Tam, Abhishek Gupta, Yang Xu, and H. Jonathan Chao, "TCP PLATO: Packet Labelling to Alleviate Time-Out", *IEEE journal on selected areas in communications* , Vol. 32, NO. 1, January 2014, pp. 65-76.
 
