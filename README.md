@@ -103,12 +103,27 @@ The modified buffer management of switch is shown below:
   * [Star Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/star.cc)
   * [Dumbbell Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/dumbbell.cc)  
 
+### Results:
 * The obtained results are plotted using MATLAB 
+* Performance comparison of TCP PLATO with TCP NewReno using star topology is shown below:
+<p align="center">
+  <img width="660" height="500" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/RTO.png">
+</p>
+
+* Performance comparison of TCP PLATO with TCP NewReno using dumbbell topology is shown below:
+<p align="center">
+  <img width="660" height="500" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/RTO_dumb.png">
+</p>
+
+* Performance of TCP PLATO for star and dumbbell topologies is shown below:
+<p align="center">
+  <img width="660" height="500" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/starvsdumb.png">
+</p>
 
 ### Conclusions:
 
-<p align="justify"> When multiple synchronized servers send data to the same client in parallel, TCP incast congestion occurs. It is mainly due to the occurrence of retransmission timeout at one or more servers due to the packet loss. TCP PLATO uses a labelling method to improve the existing loss detection mechanism of TCP NewReno. From the ns-3 simulation results obtained, we can see that throughput of DCN (Data Center Network) can be increased by reduction of RTOmin values. And packet labelling method
-(TCP PLATO) provides better throughput than TCP NewReno for same reduced RTOmin values(i.e.,RTOmin=1ms). DCN was simulated using star and dumbbell topologies but we can see that DCN with star topology provides better throughput than DCN with dumbbell topology. Hence, star topology is preferable for DCN.</p>
+* TCP PLATO provides better throughput than TCP NewReno.
+* <p align="justify"> DCN was simulated using star and dumbbell topologies but we can seethat DCN with star topology provides better throughput than DCNwith dumbbell topology.  Hence, star topology is preferable for DCN. 
 
 
 ### References
