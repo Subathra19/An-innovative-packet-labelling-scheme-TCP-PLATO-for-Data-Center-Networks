@@ -40,7 +40,9 @@ The labelling of segments and acknowledgements are done based on the algorithm a
 <p align="center">
   <img width="460" height="600" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/plato.png ">
 </p>
-
+<p align="center">
+  Flow Chart
+ </p>
 There are five states in TCP PLATO based on which labelling is done. They are:
 * <p align="justify"> LABEL: Once the TCP connection is established by three-way handshake mechanism, TCP labels the first segment to be transmitted and enters DON’T LABEL state.</p> 
 * <p align="justify"> DON’T LABEL: In this state, TCP will not label any segments. TCP will remain in this state till it gets a labelled acknowledgement. Once it gets a labelled acknowledgement, it moves to TRANSIENT state.</p> 
@@ -57,7 +59,7 @@ PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and c
 </p>
 <p align="justify"> TOS field is 8 bits long in which we will use one bit for labelling. PLATO will set TOS as 8 for labelled segments and 0 for unlabelled segments. Once the connection is established, PLATO will set TOS as 8 for the first segment and will enter DON’T LABEL state. Here, PLATO will set TOS field as 0 for the remaining segments until we get labelled acknowledgement.</p>
 
-* The code for TCP PLATO can be obtained by modifying the code of [TCP SOCKET BASE](https://www.nsnam.org/doxygen/tcp-socket-base_8cc_source.html) based on the above flow chart. 
+* The code for TCP PLATO can be obtained by modifying the code of [TCP SOCKET BASE](https://www.nsnam.org/doxygen/tcp-socket-base_8cc_source.html) based on the flow chart of TCP PLATO. 
 
 ### Switch implementation
 <p align="justify"> The standard drop tail queuing of the switch will eventually make the buffer to overflow and labelled segments/acks will be dropped. When the segment
