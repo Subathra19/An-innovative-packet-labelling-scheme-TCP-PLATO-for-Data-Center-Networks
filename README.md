@@ -43,6 +43,7 @@ The labelling of segments and acknowledgements are done based on the algorithm a
 <p align="center">
   Flow Chart
  </p>
+ 
 There are five states in TCP PLATO based on which labelling is done. They are:
 * <p align="justify"> LABEL: Once the TCP connection is established by three-way handshake mechanism, TCP labels the first segment to be transmitted and enters DON’T LABEL state.</p> 
 * <p align="justify"> DON’T LABEL: In this state, TCP will not label any segments. TCP will remain in this state till it gets a labelled acknowledgement. Once it gets a labelled acknowledgement, it moves to TRANSIENT state.</p> 
