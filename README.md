@@ -11,13 +11,13 @@ Many applications such as cluster-based storage in DCN require many to one type 
 
 * In cluster-based storage system, we use two or more storage servers which work together in order to increase performance and capacity. With the help of clustering, a file can be accessed from any server irrespective of its location. It distributes the workload between the servers and manages the transfer of workloads. The advantages of such storage are: low cost, with the increase in demand for digital content storage cluster based storage is the best solution.
 
-<!-- Alignment options!!!!! -->
-<img align="center" width="100" height="100" src="http://www.fillmurray.com/100/100">
 ![alt text](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png) 
 *Data Center Network*
-
+<p align="center">
+  <img width="460" height="300" src="http://https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png ">
+</p>
 <figure>
-  <img src="{{https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png }}">
+  <img src="{{}}">
   <figcaption>{{ Data Center Network }}</figcaption>
 </figure>
 
