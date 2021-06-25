@@ -14,10 +14,10 @@ Many applications such as cluster-based storage in DCN require many to one type 
 ![alt text](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png) 
 *Data Center Network*
 <p align="center">
-  <img width="460" height="300" src="http://https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png ">
+  <img width="460" height="300" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png ">
 </p>
 <figure>
-  <img src="{{}}">
+  <img src="{{https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/cluster.png }}">
   <figcaption>{{ Data Center Network }}</figcaption>
 </figure>
 
