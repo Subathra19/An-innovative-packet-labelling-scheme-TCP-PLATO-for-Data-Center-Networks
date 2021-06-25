@@ -86,7 +86,17 @@ The modified buffer management of switch is shown below:
       }
     }
 ```
-* The existing [red-queue-algorithm](https://www.nsnam.org/docs/release/3.24/doxygen/red-queue_8cc_source.html) is  modified according to the requirement as [mod-red-queue](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/mod-red-queue.cc)
+* The above modification should be added in the existing [red-queue-algorithm](https://www.nsnam.org/docs/release/3.24/doxygen/red-queue_8cc_source.html).
+
+### Simulation
+* The simulation parameters used are:
+<p align="center">
+  <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/simulation_parameters.PNG">
+</p>
+
+*  The code to generate DCN network using star topology and dumbbell topology is given below:
+  * [Star Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/star.cc)
+  * [Dumbbell Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/dumbbell.cc)  
 
 ### References
 [1] Shikar Shukla, Shingau Chan, Adrian S.-W. Tam, Abhishek Gupta, Yang Xu, and H. Jonathan Chao, "TCP PLATO: Packet Labelling to Alleviate Time-Out", *IEEE journal on selected areas in communications* , Vol. 32, NO. 1, January 2014, pp. 65-76.
