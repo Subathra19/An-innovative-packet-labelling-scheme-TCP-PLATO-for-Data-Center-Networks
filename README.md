@@ -38,7 +38,7 @@ The labelling of segments and acknowledgements are done based on the algorithm a
 </p>
 
 There are five states in TCP PLATO based on which labelling is done. They are:
-* LABEL: Once the TCP connection is established by three-way handshake mechanism, TCP labels the first segment to be transmitted and enters DON’T LABEL state.
+* <p align="justify"> LABEL: Once the TCP connection is established by three-way handshake mechanism, TCP labels the first segment to be transmitted and enters DON’T LABEL state.</p> 
 * <p align="justify"> DON’T LABEL: In this state, TCP will not label any segments. TCP will remain in this state till it gets a labelled acknowledgement. Once it gets a labelled acknowledgement, it moves to TRANSIENT state.</p> 
 * <p align="justify"> TRANSIENT: In this state, TCP checks the data availability: whether data is available from application layer, whether available window is positive. If data is available to send, then TCP enters LABEL state and send a labelled segment. If data cannot be sent, then TCP enters WAIT or ARRESTED state based on congestion state of TCP </p>
 * <p align="justify"> WAIT: When data cannot be sent and TCP is in Fast Recovery state, then PLATO enters this state. In this state, PLATO just waits for the acknowledgement and decides based on acks. If we receive duplicate or partial acks, then PLATO enters TRANSIENT state. But if TCP receives a full acknowledgement and still cannot send data, then it will enter ARRESTED state.</p>
@@ -46,3 +46,9 @@ There are five states in TCP PLATO based on which labelling is done. They are:
 
 PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and can send data, we will enter TRANSIENT state. Similarly, if TCP get an ack and its in Fast Recovery state, then PLATO enters WAIT state.
 
+### Implementation of PLATO
+<p align="justify"> Segments are labelled by using TOS (Type of Service) field in IP header. Ip header format is shown below:</p>
+<p align="center">
+  <img width="460" height="600" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/Buffer.png ">
+</p>
+<p align="justify"> TOS field is 8 bits long in which we will use one bit for labelling. PLATO will set TOS as 8 for labelled segments and 0 for unlabelled segments. Once the connection is established, PLATO will set TOS as 8 for the first segment and will enter DON’T LABEL state. Here, PLATO will set TOS field as 0 for the remaining segments until we get labelled acknowledgement.</p>
