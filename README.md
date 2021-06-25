@@ -88,3 +88,18 @@ The modified buffer management of switch is shown below:
 ```
 * The existing [red-queue-algorithm](https://www.nsnam.org/docs/release/3.24/doxygen/red-queue_8cc_source.html) is  modified according to the requirement as [mod-red-queue](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/mod-red-queue.cc)
 
+### References
+[1] Shikar Shukla, Shingau Chan, Adrian S.-W. Tam, Abhishek Gupta, Yang Xu, and H. Jonathan Chao, "TCP PLATO: Packet Labelling to Alleviate Time-Out", *IEEE journal on selected areas in communications* , Vol. 32, NO. 1, January 2014, pp. 65-76.
+
+[2] Alexander Afanasyev, Neil Tilley, Peter Reiher and Leonard Kleinrock, “Host-to-Host Congestion Control for TCP”, *IEEE communications surveys and tutorials* , Vol. 12, NO. 3, 2010, pp. 304-342.
+
+[3] Performance browser networks by O'Reilly (Chapter 1 and 2).
+
+[4] [RFC 793](https://datatracker.ietf.org/doc/html/rfc793)
+
+[5] http://www.nsnam.org/
+
+
+
+
+
