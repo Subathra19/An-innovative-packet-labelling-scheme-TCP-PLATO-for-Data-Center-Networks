@@ -18,3 +18,9 @@ In cluster-based storage system, we use two or more storage servers which work t
 <p align="justify">
 Above figure shows a simple cluster-based storage system where one client requests data from multiple servers through the synchronized read. On receiving SRU(Server Request Unit) from the client, servers start sending data in parallel. Upon the successful receipt of all the SRU’s, the client can send out new requests for another round of SRU’s. Hence, the finish time of a round of transfers depends on the slowest server. When a server is involved in a synchronized request experiences a time-out (i.e., RTO), other servers can finish their response, but the client must wait for a minimum of 200ms (RTOmin) before receiving a remaining response. In the DCN environment the typical Round Trip Time (RTT) is in the order of 100µs, therefore the RTO can result in TCP incast throughput collapse. Thus the RTO resulting from packet loss leads to severe link underutilization, and consequently the throughput collapse.
 </p>
+<p align="justify">
+  TCP incast occurs due to the existing TCP’s loss detection mechanism where we need to wait for a long idle period of Retransmission Timeout (RTO) to detect packet loss.The major reasons for RTO:
+  </p>
+  * Block loss
+  * Double loss
+  * Tail loss
