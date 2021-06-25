@@ -60,9 +60,10 @@ The modified buffer management of switch is shown below:
  <p align="center">
   <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/.png ">
 </p> 
-<p align="justify"> If the instantaneous queue length is less than T hP , then both labelled and unlabeled packets are enqueued. If the instantaneous queue length is greater than T hP , only labelled packets will be enqueued. This buffer modification allows senders to avoid RTO.</p>
+<p align="justify"> If the instantaneous queue length is less than Th<sub>P</sub> , then both labelled and unlabeled packets are enqueued. If the instantaneous queue length is greater than Th<sub>P</sub>, only labelled packets will be enqueued. This buffer modification allows senders to avoid RTO.</p>
 
 <p align="justify"> In order to differentiate labelled packets from unlabeled packets, we will extract IP header from the packet. We know that as the data travels through TCP/IP stack, each layer will add its own header (which is known as encapsulation) as shown in Fig.4.6. Hence, in order to check TOS field, we have to extract IP header from the incoming segment.</p> 
+
 * The code for IP header extraction is:
 ```cpp
   if (nQueued > m_th)
