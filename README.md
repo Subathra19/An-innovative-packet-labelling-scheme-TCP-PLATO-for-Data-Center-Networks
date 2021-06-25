@@ -49,6 +49,6 @@ PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and c
 ### Implementation of PLATO
 <p align="justify"> Segments are labelled by using TOS (Type of Service) field in IP header. Ip header format is shown below:</p>
 <p align="center">
-  <img width="460" height="600" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/Buffer.png ">
+  <img width="460" height="300" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/Buffer.png ">
 </p>
 <p align="justify"> TOS field is 8 bits long in which we will use one bit for labelling. PLATO will set TOS as 8 for labelled segments and 0 for unlabelled segments. Once the connection is established, PLATO will set TOS as 8 for the first segment and will enter DON’T LABEL state. Here, PLATO will set TOS field as 0 for the remaining segments until we get labelled acknowledgement.</p>
