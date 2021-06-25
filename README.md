@@ -32,6 +32,17 @@ Above figure shows a simple cluster-based storage system where one client reques
 * It allows TCP to detect packet loss by three duplicate acknowledgements instead of time expensive RTO and thereby improves throughput.
 
 ### Mechanism of TCP PLATO
+The labelling of segments and acknowledgements are done based on the algorithm as shown below:
 <p align="center">
   <img width="460" height="600" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/plato.png ">
 </p>
+
+There are five states in TCP PLATO based on which labelling is done. They are:
+* LABEL: Once the TCP connection is established by three-way handshake mechanism, TCP labels the first segment to be transmitted and enters DON’T LABEL state.
+* DON’T LABEL: In this state, TCP will not label any segments. TCP will remain in this state till it gets a labelled acknowledgement. Once it gets a labelled acknowledgement, it moves to TRANSIENT state.
+* TRANSIENT: In this state, TCP checks the data availability: whether data is available from application layer, whether available window is positive. If data is available to send, then TCP enters LABEL state and send a labelled segment. If data cannot be sent, then TCP enters WAIT or ARRESTED state based on congestion state of TCP.
+* WAIT: When data cannot be sent and TCP is in Fast Recovery state, then PLATO enters this state. In this state, PLATO just waits for the acknowledgement and decides based on acks. If we receive duplicate or partial acks, then PLATO enters TRANSIENT state. But if TCP receives a full acknowledgement and still cannot send data, then it will enter ARRESTED state.
+* ARRESTED: When data cannot be sent and TCP is not in Fast Recovery state (i.e., TCP is in congestion avoidance state or slow start state), then PLATO enters ARRESTED state. In this state, PLATO initiates a counter as 3 and send dummy segment. On receiving dummy segment, receiver replies with a dummy acknowledgment. Whenever sender receives a dummy ack it decrements the counter and send dummy segment. This goes on till counter hits zero, once counter becomes zero.
+
+PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and can send data, we will enter TRANSIENT state. Similarly, if TCP get an ack and its in Fast Recovery state, then PLATO enters WAIT state.
+
