@@ -1,11 +1,12 @@
-<p align="justify">
-# An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks
 
+# An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks
+<p align="justify">
 In  data  center  networks,  many  applications  such  as  cluster-based  storage and MapReduce require many to one communication and high fan-in.  When multiple synchronized servers send data to the same client in parallel, TCPincast congestion occurs.  It leads to TCP throughput collapse, substantiallydegrading  the  performance  of  the  application. Hence, the existing loss detection mechanism of TCP NewReno has been modified by a packet labelling scheme called TCP PLATO. In PLATO, labelled packets are givenmore  priority  over  unlabelled  packets  at  the  switch.   This  allows  TCP  to detect packet loss by three duplicate acknowledgements and avoid RTO andthereby improve throughput.  TCP PLATO has been simulated in ns-3 and its performance is compared with TCP NewReno for various buffer size, SRU,and topologies. Results are plotted with the help of MATLAB.
+ </p>
 
 ## Introduction
 Data center is a pool of resources (computational/ storage) interconnected using a communication network.
-
+<p align="justify">
 * DCNs were brought into put a central place for computational, storage and networking needs for the organization. With the advent of cloud computingand storage, DCN needs to be scalable and efficient to handle this growth. Companies need to manage and upgrade their personal DCN’s regularly. There are companies which
 provide DCN services to the public as well, like Dropbox, Google drive.
 Many applications such as cluster-based storage in DCN require many to one type of data communication with a high fan in.
