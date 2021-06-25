@@ -20,7 +20,8 @@ Above figure shows a simple cluster-based storage system where one client reques
 </p>
 <p align="justify">
   TCP incast occurs due to the existing TCP’s loss detection mechanism where we need to wait for a long idle period of Retransmission Timeout (RTO) to detect packet loss.The major reasons for RTO:
-  </p>
+</p>
+
 * Block loss
 * Double loss
 * Tail loss
