@@ -58,7 +58,7 @@ PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and c
 reaches the switch, it identifies the labelled and unlabelled segment based on TOS field. We have to modify the buffer management system of the switch in order to preferentially enqueue labelled segments/acks and retransmitted segments. It uses a simple First In First Out (FIFO) to enqueue and dequeue packets and an intermediate threshold Th<sub>P</sub>  will be set.</p> 
 The modified buffer management of switch is shown below:
  <p align="center">
-  <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/.png ">
+  <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/ipheader.png ">
 </p> 
 <p align="justify"> If the instantaneous queue length is less than Th<sub>P</sub> , then both labelled and unlabeled packets are enqueued. If the instantaneous queue length is greater than Th<sub>P</sub>, only labelled packets will be enqueued. This buffer modification allows senders to avoid RTO.</p>
 
@@ -82,5 +82,5 @@ The modified buffer management of switch is shown below:
       }
     }
 ```
-* The modified code of queue algorithm can be found [here](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/mod-red-queue.cc)
+* The existing [red-queue-algorithm](https://www.nsnam.org/docs/release/3.24/doxygen/red-queue_8cc_source.html) is  modified according to the requirement as [mod-red-queue](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/mod-red-queue.cc)
 
