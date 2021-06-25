@@ -112,12 +112,12 @@ The modified buffer management of switch is shown below:
 
 * Performance comparison of TCP PLATO with TCP NewReno using dumbbell topology is shown below:
 <p align="center">
-  <img width="660" height="400" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/RTO_dumb.png">
+  <img width="560" height="400" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/RTO_dumb.png">
 </p>
 
 * Performance of TCP PLATO for star and dumbbell topologies is shown below:
 <p align="center">
-  <img width="660" height="400" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/starvsdumb.png">
+  <img width="560" height="400" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/starvsdumb.png">
 </p>
 
 ### Conclusions:
