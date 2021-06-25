@@ -6,8 +6,8 @@ In  data  center  networks,  many  applications  such  as  cluster-based  storag
 
 ## Introduction
 Data center is a pool of resources (computational/ storage) interconnected using a communication network.
-<p align="justify">
-* DCNs were brought into put a central place for computational, storage and networking needs for the organization. With the advent of cloud computingand storage, DCN needs to be scalable and efficient to handle this growth. Companies need to manage and upgrade their personal DCN’s regularly. There are companies which
+
+* <p align="justify">DCNs were brought into put a central place for computational, storage and networking needs for the organization. With the advent of cloud computingand storage, DCN needs to be scalable and efficient to handle this growth. Companies need to manage and upgrade their personal DCN’s regularly. There are companies which
 provide DCN services to the public as well, like Dropbox, Google drive. Many applications such as cluster-based storage in DCN require many to one type of data communication with a high fan in.
 </p>
 
