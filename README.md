@@ -94,7 +94,7 @@ The modified buffer management of switch is shown below:
   <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/simulation_parameters.PNG">
 </p>
 
-*  The code to generate DCN network using star topology and dumbbell topology is given below:
+*  The code to generate DCN network and obtain throughput using star topology and dumbbell topology is given below
   * [Star Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/star.cc)
   * [Dumbbell Topology](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/dumbbell.cc)  
 
