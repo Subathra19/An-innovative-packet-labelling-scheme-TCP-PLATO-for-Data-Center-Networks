@@ -52,3 +52,34 @@ PLATO invokes RTO and enters LABEL state. Meanwhile, if TCP receive an ack and c
   <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/Buffer.png ">
 </p>
 <p align="justify"> TOS field is 8 bits long in which we will use one bit for labelling. PLATO will set TOS as 8 for labelled segments and 0 for unlabelled segments. Once the connection is established, PLATO will set TOS as 8 for the first segment and will enter DON’T LABEL state. Here, PLATO will set TOS field as 0 for the remaining segments until we get labelled acknowledgement.</p>
+
+### Switch implementation
+<p align="justify"> The standard drop tail queuing of the switch will eventually make the buffer to overflow and labelled segments/acks will be dropped. When the segment
+reaches the switch, it identifies the labelled and unlabelled segment based on TOS field. We have to modify the buffer management system of the switch in order to preferentially enqueue labelled segments/acks and retransmitted segments. It uses a simple First In First Out (FIFO) to enqueue and dequeue packets and an intermediate threshold Th<sub>P</sub>  will be set.</p> 
+The modified buffer management of switch is shown below:
+ <p align="center">
+  <img width="460" height="200" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/.png ">
+</p> 
+<p align="justify"> If the instantaneous queue length is less than T hP , then both labelled and unlabeled packets are enqueued. If the instantaneous queue length is greater than T hP , only labelled packets will be enqueued. This buffer modification allows senders to avoid RTO.</p>
+
+<p align="justify"> In order to differentiate labelled packets from unlabeled packets, we will extract IP header from the packet. We know that as the data travels through TCP/IP stack, each layer will add its own header (which is known as encapsulation) as shown in Fig.4.6. Hence, in order to check TOS field, we have to extract IP header from the incoming segment.</p> 
+* The code for IP header extraction is:
+```cpp
+  if (nQueued > m_th)
+    {
+     Ptr<Packet> p = item->GetPacket();
+     Ipv4Header ipv4Header;
+     PppHeader pppHeader;
+     Ptr<Packet> q = p->Copy();
+    q->RemoveHeader(pppHeader);
+    q->RemoveHeader(ipv4Header);
+    int tos=ipv4Header.GetTos();
+    if(tos==0)
+      {
+      DropBeforeEnqueue (item, FORCED_DROP);
+      return false;
+      }
+    }
+```
+* The modified code of queue algorithm can be found [here](https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/code/mod-red-queue.cc)
+
