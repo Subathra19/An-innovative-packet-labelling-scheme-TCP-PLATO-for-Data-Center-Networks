@@ -33,5 +33,5 @@ Above figure shows a simple cluster-based storage system where one client reques
 
 ### Mechanism of TCP PLATO
 <p align="center">
-  <img width="460" height="300" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/plato.png ">
+  <img width="460" height="600" src="https://github.com/Subathra19/An-innovative-packet-labelling-scheme-TCP-PLATO-for-Data-Center-Networks/blob/main/images/plato.png ">
 </p>
